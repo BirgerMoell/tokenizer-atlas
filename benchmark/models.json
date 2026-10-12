@@ -8,5 +8,10 @@
   {"name":"Mistral NeMo","repo":"mistralai/Mistral-Nemo-Base-2407","revision":"a4477a2f977929a969745b69bbd62e03043551a5"},
   {"name":"Apertus v1","repo":"swiss-ai/Apertus-8B-2509","revision":"3162c99675aa588097cecd4a24b9aa1f712af477"},
   {"name":"DeepSeek V3","repo":"deepseek-ai/DeepSeek-V3","revision":"e815299b0bcbac849fa540c768ef21845365c9eb"},
-  {"name":"Qwen 3 8B","repo":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218"}
+  {"name":"Qwen 3 8B","repo":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218"},
+  {"name":"NVIDIA Nemotron 3 Nano 4B","repo":"nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16","revision":"dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f"},
+  {"name":"NVIDIA Nemotron 3 Nano 30B","repo":"nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16","revision":"bf77c3174f68ad409e1c2aa60daeb46e32d1c606"},
+  {"name":"NVIDIA Nemotron Nano 9B v2","repo":"nvidia/NVIDIA-Nemotron-Nano-9B-v2","revision":"6533e8de2c68e4536bf7c411d7a3ce5734111476"},
+  {"name":"NVIDIA Llama Nemotron Super 49B","repo":"nvidia/Llama-3_3-Nemotron-Super-49B-v1_5","revision":"420ba7d28211abf116b8b103ab700d92619daf98"},
+  {"name":"NVIDIA Nemotron Mini 4B","repo":"nvidia/Nemotron-Mini-4B-Instruct","revision":"791833e92ebddb0bc2c1007f6d2b6764f886a2ae"}
 ]

@@ -86,6 +86,7 @@ def main():
             "within_3x_variants": sum(x <= 3 for x in ratios.values()),
             "within_2x_priority": sum(max(ratios[code] for code in variants) <= 2 for variants in targets.values()),
             "within_3x_priority": sum(max(ratios[code] for code in variants) <= 3 for variants in targets.values()),
+            "mean_ratio": round(sum(ratios.values()) / len(ratios), 3),
             "ratios": ratios,
         })
         args.output.parent.mkdir(parents=True, exist_ok=True)

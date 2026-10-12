@@ -27,7 +27,7 @@ For reproducible results, pass `--revision MODEL=COMMIT_SHA` for each tokenizer.
 
 ## Compare language coverage
 
-The dashboard shows an independently measured count for each accessible original tokenizer artifact. See the [benchmark method and results](benchmark/README.md) to reproduce it. Its ≤2× and ≤3× English-relative counts measure token budgets over aligned translations; they do not measure model language competence.
+The dashboard shows an independently measured count for each accessible original tokenizer artifact, including five NVIDIA Nemotron variants. Use its NVIDIA filter to compare those rows. See the [benchmark method and results](benchmark/README.md) to reproduce it. Its ≤2× and ≤3× English-relative counts measure token budgets over aligned translations; they do not measure model language competence.
 
 ## Interpretation
 

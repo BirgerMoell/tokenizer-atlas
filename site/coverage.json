@@ -23,7 +23,8 @@
       "within_2x_variants": 98,
       "within_3x_variants": 129,
       "within_2x_priority": 36,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 4.51
     },
     {
       "name": "OpenEuroLLM v2 128k",
@@ -36,7 +37,8 @@
       "within_2x_variants": 91,
       "within_3x_variants": 129,
       "within_2x_priority": 34,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 4.488
     },
     {
       "name": "OpenEuroLLM v1 256k",
@@ -49,7 +51,8 @@
       "within_2x_variants": 101,
       "within_3x_variants": 138,
       "within_2x_priority": 34,
-      "within_3x_priority": 35
+      "within_3x_priority": 35,
+      "mean_ratio": 3.834
     },
     {
       "name": "OpenEuroLLM v1 128k",
@@ -62,7 +65,8 @@
       "within_2x_variants": 99,
       "within_3x_variants": 137,
       "within_2x_priority": 32,
-      "within_3x_priority": 35
+      "within_3x_priority": 35,
+      "mean_ratio": 3.803
     },
     {
       "name": "GPT-OSS 20B",
@@ -75,7 +79,8 @@
       "within_2x_variants": 156,
       "within_3x_variants": 187,
       "within_2x_priority": 35,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 2.13
     },
     {
       "name": "Gemma 3 4B",
@@ -88,7 +93,8 @@
       "within_2x_variants": 147,
       "within_3x_variants": 195,
       "within_2x_priority": 32,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 1.909
     },
     {
       "name": "Mistral NeMo",
@@ -101,7 +107,8 @@
       "within_2x_variants": 114,
       "within_3x_variants": 183,
       "within_2x_priority": 32,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 2.501
     },
     {
       "name": "Apertus v1",
@@ -114,7 +121,8 @@
       "within_2x_variants": 114,
       "within_3x_variants": 183,
       "within_2x_priority": 32,
-      "within_3x_priority": 36
+      "within_3x_priority": 36,
+      "mean_ratio": 2.501
     },
     {
       "name": "DeepSeek V3",
@@ -127,7 +135,8 @@
       "within_2x_variants": 86,
       "within_3x_variants": 168,
       "within_2x_priority": 25,
-      "within_3x_priority": 35
+      "within_3x_priority": 35,
+      "mean_ratio": 2.481
     },
     {
       "name": "Qwen 3 8B",
@@ -140,7 +149,78 @@
       "within_2x_variants": 82,
       "within_3x_variants": 158,
       "within_2x_priority": 21,
-      "within_3x_priority": 34
+      "within_3x_priority": 34,
+      "mean_ratio": 2.734
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Nano 4B",
+      "repo": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+      "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+      "vocab_size": 131072,
+      "english_tokens": 5718,
+      "within_2x_languages": 109,
+      "within_3x_languages": 175,
+      "within_2x_variants": 114,
+      "within_3x_variants": 183,
+      "within_2x_priority": 32,
+      "within_3x_priority": 36,
+      "mean_ratio": 2.501
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Nano 30B",
+      "repo": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "revision": "bf77c3174f68ad409e1c2aa60daeb46e32d1c606",
+      "vocab_size": 131072,
+      "english_tokens": 5718,
+      "within_2x_languages": 109,
+      "within_3x_languages": 175,
+      "within_2x_variants": 114,
+      "within_3x_variants": 183,
+      "within_2x_priority": 32,
+      "within_3x_priority": 36,
+      "mean_ratio": 2.501
+    },
+    {
+      "name": "NVIDIA Nemotron Nano 9B v2",
+      "repo": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+      "revision": "6533e8de2c68e4536bf7c411d7a3ce5734111476",
+      "vocab_size": 131072,
+      "english_tokens": 5718,
+      "within_2x_languages": 109,
+      "within_3x_languages": 175,
+      "within_2x_variants": 114,
+      "within_3x_variants": 183,
+      "within_2x_priority": 32,
+      "within_3x_priority": 36,
+      "mean_ratio": 2.501
+    },
+    {
+      "name": "NVIDIA Llama Nemotron Super 49B",
+      "repo": "nvidia/Llama-3_3-Nemotron-Super-49B-v1_5",
+      "revision": "420ba7d28211abf116b8b103ab700d92619daf98",
+      "vocab_size": 128256,
+      "english_tokens": 5514,
+      "within_2x_languages": 78,
+      "within_3x_languages": 158,
+      "within_2x_variants": 83,
+      "within_3x_variants": 166,
+      "within_2x_priority": 23,
+      "within_3x_priority": 35,
+      "mean_ratio": 2.999
+    },
+    {
+      "name": "NVIDIA Nemotron Mini 4B",
+      "repo": "nvidia/Nemotron-Mini-4B-Instruct",
+      "revision": "791833e92ebddb0bc2c1007f6d2b6764f886a2ae",
+      "vocab_size": 256000,
+      "english_tokens": 5539,
+      "within_2x_languages": 119,
+      "within_3x_languages": 173,
+      "within_2x_variants": 124,
+      "within_3x_variants": 181,
+      "within_2x_priority": 33,
+      "within_3x_priority": 36,
+      "mean_ratio": 2.766
     }
   ]
 }
