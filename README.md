@@ -13,7 +13,7 @@ Open <http://localhost:8000>. The dashboard reads `site/data.json`; every publis
 
 ## Run a common evaluation
 
-Install `transformers`, `datasets`, `huggingface_hub`, and `sentencepiece`, then create a JSONL corpus with `language`, `script`, `domain`, and `text` fields. Use comparable held-out samples for every tokenizer.
+Install the listed dependencies, then create a JSONL corpus with `language`, `script`, `domain`, and `text` fields. Use comparable held-out samples for every tokenizer.
 
 ```bash
 python3 -m pip install -r requirements.txt

@@ -15,7 +15,7 @@ function renderAggregate() {
   const rows = [...data.aggregate].sort((a,b) => a[activeDomain]-b[activeDomain]);
   const max = Math.max(...rows.map(row => row[activeDomain]));
   document.getElementById('chart').innerHTML = rows.map(row => `<div class="barrow ${row.name.startsWith('OpenEuroLLM v2')?'featured':''}" title="${escapeHtml(row.coverage)}"><div class="label">${escapeHtml(row.name)}</div><div class="track"><div class="fill" style="width:${100*row[activeDomain]/max}%"></div></div><div class="value">${fmt(row[activeDomain])}</div></div>`).join('');
-  document.querySelector('#aggregate-table tbody').innerHTML = rows.map(row => `<tr class="${row.name.startsWith('OpenEuroLLM v2')?'highlight-row':''}"><td>${escapeHtml(row.name)}</td><td>${Math.round(row.vocab/1024)}k</td>${['overall','flores','code','math','chat','pdf'].map(key=>`<td>${fmt(row[key])}</td>`).join('')}</tr>`).join('');
+  document.querySelector('#aggregate-table tbody').innerHTML = rows.map(row => `<tr class="${row.name.startsWith('OpenEuroLLM v2')?'highlight-row':''}"><td>${escapeHtml(row.name)}</td><td>${row.vocab.toLocaleString('en-US')}</td>${['overall','flores','code','math','chat','pdf'].map(key=>`<td>${fmt(row[key])}</td>`).join('')}</tr>`).join('');
 }
 function renderLanguages() {
   const query = document.getElementById('language-search').value.trim().toLowerCase();

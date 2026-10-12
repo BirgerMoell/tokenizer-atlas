@@ -4,7 +4,6 @@ import argparse
 import hashlib
 import json
 import math
-import statistics
 from collections import defaultdict
 from pathlib import Path
 
