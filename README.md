@@ -31,7 +31,7 @@ The dashboard shows an independently measured count for each accessible original
 
 ## Tokenizer training
 
-For a practical recipe based on Apertus v1 and Swiss AI successor experiments, see the [multilingual tokenizer training guide](docs/tokenizer-training-guide.md).
+For a project-level decision brief, see the [OpenEuroLLM tokenizer executive report](docs/openeurollm-tokenizer-executive-report.md). For a practical recipe based on Apertus v1 and Swiss AI successor experiments, see the [multilingual tokenizer training guide](docs/tokenizer-training-guide.md).
 
 ## Interpretation
 
