@@ -4,6 +4,8 @@ const domains = [
 let data;
 let activeDomain = 'flores';
 let worstFirst = false;
+let coverage;
+let threshold = 2;
 const fmt = value => Number(value).toFixed(2);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -26,4 +28,11 @@ function renderLanguages() {
     return `<tr><td>${escapeHtml(name)} <small>(${escapeHtml(code)})</small></td><td>${fmt(v2_256)}</td><td>${fmt(v2_128)}</td><td>${fmt(v1_256)}</td><td class="${delta<=0?'delta-good':'delta-bad'}">${delta>0?'+':''}${fmt(delta)}</td></tr>`;
   }).join('');
 }
+function renderCoverage() {
+  const suffix = threshold === 2 ? '2x' : '3x';
+  const rows = [...coverage.tokenizers].sort((a,b) => b[`within_${suffix}_priority`] - a[`within_${suffix}_priority`] || b[`within_${suffix}_languages`] - a[`within_${suffix}_languages`]);
+  document.querySelector('#coverage-table tbody').innerHTML = rows.map(row => `<tr class="${row.name === 'OpenEuroLLM v2 256k' ? 'highlight-row' : ''}"><td>${escapeHtml(row.name)}</td><td><strong>${row[`within_${suffix}_priority`]}</strong> / ${coverage.priority_languages}</td><td><strong>${row[`within_${suffix}_languages`]}</strong> / ${coverage.distinct_languages}</td><td>${row.vocab_size.toLocaleString('en-US')}</td><td><a href="https://huggingface.co/${encodeURI(row.repo)}/tree/${encodeURIComponent(row.revision)}" target="_blank" rel="noopener noreferrer">Pinned revision ↗</a></td></tr>`).join('') + '<tr class="unavailable"><td>Llama 3.1 8B</td><td>—</td><td>—</td><td>—</td><td>Original tokenizer gated</td></tr><tr class="unavailable"><td>EuroLLM 9B</td><td>—</td><td>—</td><td>—</td><td>Original tokenizer gated</td></tr>';
+  document.querySelectorAll('[data-threshold]').forEach(button => { const active = Number(button.dataset.threshold) === threshold; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
+}
 fetch('data.json').then(response => { if(!response.ok) throw new Error(response.status); return response.json(); }).then(json => { data=json; renderDomains();renderAggregate();renderLanguages();document.getElementById('language-search').addEventListener('input',renderLanguages);document.getElementById('sort-worst').addEventListener('click',()=>{worstFirst=!worstFirst;document.getElementById('sort-worst').textContent=worstFirst?'Show A–Z':'Show highest cost first';renderLanguages();}); }).catch(error => {document.getElementById('chart').textContent=`Could not load comparison data: ${error.message}`;});
+fetch('coverage.json').then(response => { if (!response.ok) throw new Error(response.status); return response.json(); }).then(json => { coverage=json; renderCoverage(); document.querySelectorAll('[data-threshold]').forEach(button => button.addEventListener('click', () => { threshold=Number(button.dataset.threshold); renderCoverage(); })); }).catch(error => {document.querySelector('#coverage-table tbody').innerHTML = `<tr><td colspan="5">Could not load coverage data: ${escapeHtml(error.message)}</td></tr>`;});

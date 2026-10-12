@@ -1,0 +1,12 @@
+[
+  {"name":"OpenEuroLLM v2 256k","repo":"openeurollm/tokenizer-256k-v2","revision":"c6ca0b98dcf7f485500ccbab84152f42a0527295"},
+  {"name":"OpenEuroLLM v2 128k","repo":"openeurollm/tokenizer-128k-v2","revision":"5c1fc6c70779ec84580c2a68d75c6b569b3381f5"},
+  {"name":"OpenEuroLLM v1 256k","repo":"openeurollm/tokenizer-256k","revision":"ac1ce776f8a78fc7aa96dfc91ffc1ae6966b2fa1"},
+  {"name":"OpenEuroLLM v1 128k","repo":"openeurollm/tokenizer-128k","revision":"a89eaa267790f5065e6b24b03cdb2f0d9b10b3f6"},
+  {"name":"GPT-OSS 20B","repo":"openai/gpt-oss-20b","revision":"6cee5e81ee83917806bbde320786a8fb61efebee"},
+  {"name":"Gemma 3 4B","repo":"google/gemma-3-4b-it","revision":"093f9f388b31de276ce2de164bdc2081324b9767"},
+  {"name":"Mistral NeMo","repo":"mistralai/Mistral-Nemo-Base-2407","revision":"a4477a2f977929a969745b69bbd62e03043551a5"},
+  {"name":"Apertus v1","repo":"swiss-ai/Apertus-8B-2509","revision":"3162c99675aa588097cecd4a24b9aa1f712af477"},
+  {"name":"DeepSeek V3","repo":"deepseek-ai/DeepSeek-V3","revision":"e815299b0bcbac849fa540c768ef21845365c9eb"},
+  {"name":"Qwen 3 8B","repo":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218"}
+]

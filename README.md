@@ -9,7 +9,7 @@ cd site
 python3 -m http.server 8000
 ```
 
-Open <http://localhost:8000>. The dashboard reads `site/data.json`; every published metric is labeled as **source-reported**, not as a result of this repository's runner.
+Open <http://localhost:8000>. The dashboard reads `site/data.json`; the five-domain and 36-language fertility metrics are labeled as **source-reported**. The language-coverage table is independently measured with pinned tokenizers and a shared FLORES-200 sample.
 
 ## Run a common evaluation
 
@@ -24,6 +24,10 @@ python3 scripts/evaluate.py --corpus corpus.jsonl --output results.json \
 ```
 
 For reproducible results, pass `--revision MODEL=COMMIT_SHA` for each tokenizer. The runner reports exact round-trip rate, tokens per UTF-8 byte, bytes per token, token counts and p95 length by language/script/domain. It uses `add_special_tokens=False` to compare text encoding only. Its output is deliberately separate from `site/data.json` until reviewed.
+
+## Compare language coverage
+
+The dashboard shows an independently measured count for each accessible original tokenizer artifact. See the [benchmark method and results](benchmark/README.md) to reproduce it. Its ≤2× and ≤3× English-relative counts measure token budgets over aligned translations; they do not measure model language competence.
 
 ## Interpretation
 
