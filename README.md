@@ -29,6 +29,10 @@ For reproducible results, pass `--revision MODEL=COMMIT_SHA` for each tokenizer.
 
 The dashboard shows an independently measured count for each accessible original tokenizer artifact, including five NVIDIA Nemotron variants. Use its NVIDIA filter to compare those rows. See the [benchmark method and results](benchmark/README.md) to reproduce it. Its ≤2× and ≤3× English-relative counts measure token budgets over aligned translations; they do not measure model language competence.
 
+## Tokenizer training
+
+For a practical recipe based on Apertus v1 and Swiss AI successor experiments, see the [multilingual tokenizer training guide](docs/tokenizer-training-guide.md).
+
 ## Interpretation
 
 * **Encodable**: the tokenizer can represent the text, often through byte fallback. This is not evidence that a model understands the language.
